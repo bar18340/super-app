@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  node-app:
+    build:
+      context: ./node
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
+  php-app:
+    build:
+      context: ./php
+    ports:
+      - "8000:80"
